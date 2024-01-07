@@ -15,25 +15,26 @@ class AutoOrganizerApp(rumps.App):
         super(AutoOrganizerApp, self).__init__("Auto Organizer")
         self.menu = ["Toggle Auto Organizer"]
         self.timer = None  # Timer instance
+        self.run_auto_organizer
 
     @rumps.clicked("Toggle Auto Organizer")
     def toggle_auto_organizer(self, sender):
         sender.state = not sender.state  # Toggle state immediately
         if sender.state:
-            rumps.alert("Auto Organizer is now ON",
-                        "Organizing files in the background.")
+            #rumps.alert("Auto Organizer is now ON",
+            #            "Organizing files in the background.")
             # Set the timer to delay the start of auto organizer
             self.timer = Timer(1, self.run_auto_organizer)
             self.timer.start()
         else:
-            rumps.alert("Auto Organizer is now OFF",
-                        "Files will not be automatically organized.")
+            #rumps.alert("Auto Organizer is now OFF",
+            #            "Files will not be automatically organized.")
             self.stop_auto_organizer()
 
     def get_category(self, file_type):
         # Add or modify file extensions and categories as needed
         video_extensions = ["mp4", "mkv", "avi", "mov"]
-        image_extensions = ["jpg", "jpeg", "png", "gif"]
+        image_extensions = ["jpg", "jpeg", "png", "gif", "heic", "webp", "avif"]
         document_extensions = ["pdf", "doc", "docx", "txt"]
         application_extensions = ["dmg", "exe", "app"]
 
