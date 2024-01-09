@@ -1,6 +1,6 @@
 # AutoSorter
 
-Auto Organizer is a simple macOS utility that automatically organizes files in your Downloads folder based on their types. It runs in the background, continuously sorting your downloads into predefined categories like Videos, Images, Documents, Applications, and more.
+Auto Sorter is a simple macOS utility that automatically organizes files in your Downloads folder based on their types. It runs in the background, continuously sorting your downloads into predefined categories like Videos, Images, Documents, Applications, and more.
 
 ## Features
 
